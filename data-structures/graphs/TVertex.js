@@ -1,9 +1,11 @@
 /**
- * Represents a Vertex to store the vertices of a graph
+ * Represents a Vertex to store vertices of a graph.
+ * 
+ * This code is intended for educational purposes only.
  */
 class TVertex {
-  constructor(_name) {
-    this.name = _name;
+  constructor(_id) {
+    this.id = _id;
     this.wasVisited = false;
-  }
+  }  
 }
