@@ -1,6 +1,9 @@
 /**
- * Defines a Graph structure with a set of vertices and 
- * a set of edges.
+ * Defines a Graph structure with adjacency lists, containing a 
+ * set of vertices and a set of edges.
+ * 
+ * This Graph is Undirected. For the directed version, take a 
+ * look at the TDigraph.js file.
  */
 class TGraph {
   constructor() {
@@ -18,7 +21,7 @@ class TGraph {
   addEdge(vA, vB) {
     const indexA = this.vertices.indexOf(vA);
     const indexB = this.vertices.indexOf(vB);
-    
+
     if ((indexA > -1) && (indexB > -1)) {
       this.edges[indexA].push(indexB);
       this.edges[indexB].push(indexA);
