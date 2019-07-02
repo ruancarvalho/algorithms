@@ -59,33 +59,43 @@ class TGraph {
   /**
    * This will be implemented at TGraph.bfs.js
    */
-  breadthFirst() { return null; }
+  breadthFirstSearch(vertex) {
+
+    if (!this.vertices.has(vertex)) {
+      console.log('Vertex does not exists.');
+      return;
+    }
+
+    const queue = [];
+    const visited = {};
+
+    visited[vertex] = true;
+    queue.push(vertex);
+
+    console.log(vertex);
+
+    let current, edges;
+
+    while(queue.length > 0) {
+      current = queue.shift();
+      edges = this.vertices.get(current)
+
+      for (const vertex of edges) {
+        if (!visited[vertex]) {
+          visited[vertex] = true;
+          queue.push(vertex);
+
+          console.log(vertex);
+        }
+      }
+    }
+  }
 
   /**
    * This will be implemented at TGraph.dfs.js
    */
-  depthFirstSearch(vertex) {     
-    
-    if (!this.vertices.has(vertex)) {
-      console.log('Vertex does not exists.');
-    }
-    
-    const visits = {};
-    this.depthTraverse(vertex, visits);
-  }
-  
-  depthTraverse(vertex, visited) {
-    visited[vertex] = true;
-    const edges = this.vertices.get(vertex);
+  depthFirstSearch(vertex) { return null; }
 
-    console.log(vertex);
-
-    for (const edge of edges) {
-      if (!visited[edge]) {
-        this.depthTraverse(edge, visited);
-      }
-    }
-  };
 }
 
 
