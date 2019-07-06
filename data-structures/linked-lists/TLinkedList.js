@@ -3,27 +3,23 @@
  * where N is the length of the linked list.
  * 
  * This code is intended for educational purposes only.
- * It is highly verbose for better understanding.
+ * Also, it is extremely verbose for better understanding of flow.
  * 
  * @author ruancarvalho
  */
 class TLinkedList {
   /**
    * 
-   * @param {TNode} node 
+   * @param {*} node 
    */
   constructor(node = null) {
     this.head = node;
 
-    if (this.head !== nsull) {
+    if (this.head !== null) {
       this.length = 1;
     } else {
       this.length = 0;
     }
-
-    this.insert();
-    this.remove();
-    this.get(index);
   }
 
   /**
