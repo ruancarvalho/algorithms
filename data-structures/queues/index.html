@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Queues</title>
-  <script src="./TNode.js"></script>
   <script src="./TQueue.js"></script>
   <script src="./TCircularQueue.js"></script>
 </head>
@@ -18,7 +17,23 @@
   <p>Test Case 01:</p>
   <pre>
     <code>
+      const q = new TQueue();
+
+      q.enqueue(5);
+      q.enqueue(3);
+      if(q.isEmpty() === false) {
+        console.log(q.front());
+      }
       
+      q.dequeue();
+      if (q.isEmpty() === false) {
+        console.log(q.front());
+      }
+      
+      q.dequeue();
+      if (q.isEmpty() === false) {
+        console.log(q.front());
+      }
     </code>
   </pre>
   
