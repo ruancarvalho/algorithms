@@ -18,3 +18,10 @@
 * HackerRank
 * Codillity
 * 
+
+## Commands
+
+Start server on localhost:8080
+```
+$ http-server -c-1
+```
