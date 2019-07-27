@@ -6,11 +6,11 @@ const mergesort = function(items = []) {
   if (items.length < 2) {    
     return items
   } else {
-    console.log('mergesort', items);
-
+    
     let leftItems = items.slice(0, items.length / 2);
     let rightItems = items.slice(items.length / 2);
     
+    console.log('left', leftItems, 'right', rightItems);
     // divide all items
     let left = mergesort(leftItems);
     let right = mergesort(rightItems);
@@ -43,6 +43,6 @@ const merge = function(left = [], right = []) {
   while (right.length){
     sorted.push(right.shift());
   }
-  console.log('sorted', sorted)
+  console.log('sort and merge', sorted)
   return sorted;
 }
